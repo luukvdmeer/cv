@@ -1,0 +1,193 @@
+---
+name: Lucas
+surname: van der Meer
+position: "Geospatial Data Scientist"
+address: "Salzburg, Austria"
+profilepic: "./img/me.jpg"
+email: "luukvandermeer@live.nl"
+github: luukvdmeer
+linkedin: luuk-van-der-meer
+twitter: LuukvanderMeer
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 59C6B0
+aboutme: "I am a Master of Science in Geospatial Technologies who enjoys working at the interplay between theory and practice. My passion is to improve the quality of our living environments by supporting design choices with spatio-temporal data science."
+docname: CV
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+
+require(xfun)
+
+packages <- c('vitae'     # The CV's LaTeX Template
+             ,'tibble'    # Data structure for tribbles
+             ,'magrittr'  # The Pipe %>%
+             ,'here'      # Relative File Paths
+             ,'readr'     # Data Loading
+             ,'glue'      # String Manipulation
+            )
+
+xfun::pkg_attach2(packages, message = FALSE)
+
+source(file = here("R","data.R"))
+
+```
+
+```{r funcs}
+
+knit_print.vitae_table = function(x, options) {
+  x[is.na(x)] = ""
+  if (isTRUE(attr(x, "protect"))) {
+    protect_tex_input = vitae:::protect_tex_input
+  } else {
+    protect_tex_input = identity
+  }
+  entry_format_func = function(key, value){
+    paste(c(
+      "\\begin{cventries}",
+      vitae:::glue_alt("\t\\cvdict{<<key>>}{<<value>>}"),
+      "\\end{cventries}"
+    ), collapse = "\n")
+  }
+  knitr::asis_output(
+    entry_format_func(
+      protect_tex_input(x$with),
+      protect_tex_input(x$what)
+    )
+  )
+}
+
+table_entries = function(data, ...) {
+  obj = detailed_entries(data, ...)
+  obj_class = class(obj)
+  obj_class[1] = "vitae_table"
+  class(obj) = obj_class
+  obj
+}
+
+```
+
+# Employment
+
+```{r EMPLOYMENT}
+
+work %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    when = glue::glue("{startMonth} {startYear} \\textemdash {endMonth} {endYear}",.na = ""),
+    where = where,
+    .protect = FALSE
+  )
+
+```
+
+# Education
+
+```{r EDUCATION}
+
+edu %>%
+  detailed_entries(
+    with = inst,
+    what = degree,
+    why = detail,
+    when = glue::glue("{startYear} \\textemdash {endYear}", .na = ""),
+    where = where,
+    .protect = FALSE
+)
+```
+
+\newpage
+
+# Publications & Presentations
+
+```{r PUBLICATIONS}
+
+bibliography_entries(here("bib", "pubs.bib"))
+
+```
+
+# Software Development
+
+```{r WORKS}
+
+dev %>%
+  detailed_entries(
+    with = area,
+    what = accomplishment,
+    why = detail,
+    when = year,
+    where = where,
+    .protect = FALSE
+  )
+
+```
+
+# Honors
+
+```{r HONORS}
+
+honors %>%
+  detailed_entries(
+    with = area,
+    what = accomplishment,
+    why = detail,
+    when = year,
+    where = where
+  )
+
+```
+
+# Technical Skills
+
+```{r TECHSKILLS}
+
+tech %>%
+  table_entries(
+    with = area,
+    what = skills
+  )
+
+```
+
+# Soft Skills
+
+```{r SOFTSKILLS}
+
+soft %>%
+  table_entries(
+    with = area,
+    what = skills,
+    .protect = FALSE
+  )
+
+```
+
+# Languages
+
+```{r LANGUAGES}
+
+lang %>%
+  table_entries(
+    with = level,
+    what = lang
+  )
+
+```
+
+# Referrents
+
+```{r REFERRENTS}
+
+ref %>%
+  table_entries(
+    with = name,
+    what = contact,
+    .protect = FALSE
+  )
+
+```
