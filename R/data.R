@@ -57,12 +57,13 @@ edu <- tribble(
     "MSc. in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Machine Learning and data mining of geospatial big data.",
     "MSc. in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Remote sensing.",
     "MSc. in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Project management and academic writing.",
-    "MSc. in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "For my \\href{https://run.unl.pt/handle/10362/67512}{\\underline{master thesis}}, I created a spatio-temporal forecasting system for bike availability in dockless bike sharing systems, using time series forecasting methods. It was supervised by Prof. Dr. Edzer Pebesma. Grade: 20 out of 20.",
+    # Summer school
+    "OpenGeoHub Summer School on Spatial and Spatiotemporal Computing", NA, 2019, "University of Muenster, Institute for Geoinformatics", "Muenster, Germany", "Processing large-scale Earth observation data.",
+    "OpenGeoHub Summer School on Spatial and Spatiotemporal Computing", NA, 2019, "University of Muenster, Institute for Geoinformatics", "Muenster, Germany", "Machine learning with spatio-temporal data.",
     # Minor
     "Academic minor in Mathematics \\& Statistics", 2015, 2016, "University of Groningen, Faculty of Science and Engineering \\& Faculty of Economics and Business", "Groningen, The Netherlands", "Statistics and statistical reasoning.",
     "Academic minor in Mathematics \\& Statistics", 2015, 2016, "University of Groningen, Faculty of Science and Engineering \\& Faculty of Economics and Business", "Groningen, The Netherlands", "Probability theory.",
-    "Academic minor in Mathematics \\& Statistics", 2015, 2016, "University of Groningen, Faculty of Science and Engineering \\& Faculty of Economics and Business", "Groningen, The Netherlands", "Calculus.",
-    "Academic minor in Mathematics \\& Statistics", 2015, 2016, "University of Groningen, Faculty of Science and Engineering \\& Faculty of Economics and Business", "Groningen, The Netherlands", "Linear algrebra.",
+    "Academic minor in Mathematics \\& Statistics", 2015, 2016, "University of Groningen, Faculty of Science and Engineering \\& Faculty of Economics and Business", "Groningen, The Netherlands", "Calculus and linear algrebra.",
     # BSc.
     "BSc. in Environmental and Infrastructure Planning", 2013, 2016, "University of Groningen, Faculty of Spatial Sciences", "Groningen, The Netherlands", "Spatial information technology.",
     "BSc. in Environmental and Infrastructure Planning", 2013, 2016, "University of Groningen, Faculty of Spatial Sciences", "Groningen, The Netherlands", "Urban planning, environmental planning and water planning.",
