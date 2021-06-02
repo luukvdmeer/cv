@@ -179,9 +179,9 @@ lang %>%
 
 ```
 
-# Referrents
+# References
 
-```{r REFERRENTS}
+```{r REFERENCES}
 
 ref %>%
   table_entries(
