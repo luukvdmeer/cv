@@ -20,19 +20,17 @@
 
 tech <- tribble(
     ~area, ~skills,
-    "Programming languages", "R, Python, PostreSQL (with PostGIS extension), Bash",
+    "Programming languages", "R, Python, PostgreSQL (with PostGIS extension), Bash",
     "Desktop GIS", "QGIS, ArcGIS, GRASS GIS",
-    "Routing libraries", "Google OR Tools, GraphHopper, OpenTripPlanner, OSRM, pgrouting, R5",
-    "Markup languages", "Markdown, RMarkdown, Latex, HTML",
-    "DevOps", "Docker, Git, GitHub, Jira",
-    "Other", "Linux OS, OpenStreetMap, GDAL, PROJ, GEOS"
+    "Geospatial tools", "GDAL, GEOS, PROJ, Leaflet, OpenStreetMap API, OSRM, OpenTripPlanner, R5",
+    "Reproducible research", "Docker, Binder, Git, GitHub, Quarto, Jupyter, Markdown, Latex"
 )
 
 soft <- tribble(
     ~area, ~skills,
     "Organization", "I was part of the organizing comittee of the \\href{https://geomundus.org/2018/}{\\underline{Geomundus Conference}} in Lisbon, Portugal, 2018.",
     "Management", "I was treasurer of the student cycle club in Groningen, The Netherlands, between 2013 and 2014.",
-    "Sports", "I have been part of several cycling teams up to elite level from 2012 until present."
+    "Teamwork", "I have been a cyclist in several cycling teams up to elite level from 2012 until present."
 )
 
 lang <- tribble(
@@ -45,42 +43,40 @@ lang <- tribble(
 honors <- tribble(
     ~area, ~accomplishment, ~year, ~where, ~detail,
     "Best Student Award", "For the Master of Science in Geospatial Technologies", 2019, "Muenster, Germany", "Final grade: 19 out of 20.",
-    "Best Poster Award", "At the AGIT Symposium for Applied Geoinformatics", 2020, "Salzburg, Austria", "SemantiX - A cross-sensor semantic Earth observation data cube to open and leverage essential climate variables with scientists and the public"
+    "Outstanding Regular Talk Award", "At the UseR! Conference", 2021, "Remote", "Tidy geospatial networks in R."
 )
 
 edu <- tribble(
     ~inst, ~startYear, ~endYear, ~degree, ~where, ~detail,
     # MSc.
-    "MSc. in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Reproducible spatial data science in R, Python and SQL.",
-    "MSc. in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Geographic information science.",
-    "MSc. in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Geostatistics and spatial statistics.",
-    "MSc. in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Machine Learning and data mining of geospatial big data.",
-    "MSc. in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Remote sensing.",
-    "MSc. in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Project management and academic writing.",
-    # Summer school
-    "OpenGeoHub Summer School on Spatial and Spatiotemporal Computing", NA, 2019, "University of Muenster, Institute for Geoinformatics", "Muenster, Germany", "Processing large-scale Earth observation data.",
-    "OpenGeoHub Summer School on Spatial and Spatiotemporal Computing", NA, 2019, "University of Muenster, Institute for Geoinformatics", "Muenster, Germany", "Machine learning with spatio-temporal data.",
+    "Master of Science in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Reproducible spatial data science in R, Python and SQL.",
+    "Master of Science in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Geographic information science.",
+    "Master of Science in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Geostatistics and spatial statistics.",
+    "Master of Science in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Machine Learning and data mining of geospatial big data.",
+    "Master of Science in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Remote sensing.",
+    "Master of Science in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Project management and academic writing.",
+    "Master of Science in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "For my master thesis, I created an automated spatio-temporal forecasting system for bike availability in dockless bike sharing systems, using time series forecasting methods. It was supervised by Prof. Dr. Edzer Pebesma. Grade: 20/20.",
     # Minor
     "Academic minor in Mathematics \\& Statistics", 2015, 2016, "University of Groningen, Faculty of Science and Engineering \\& Faculty of Economics and Business", "Groningen, The Netherlands", "Statistics and statistical reasoning.",
     "Academic minor in Mathematics \\& Statistics", 2015, 2016, "University of Groningen, Faculty of Science and Engineering \\& Faculty of Economics and Business", "Groningen, The Netherlands", "Probability theory.",
     "Academic minor in Mathematics \\& Statistics", 2015, 2016, "University of Groningen, Faculty of Science and Engineering \\& Faculty of Economics and Business", "Groningen, The Netherlands", "Calculus and linear algrebra.",
     # BSc.
-    "BSc. in Environmental and Infrastructure Planning", 2013, 2016, "University of Groningen, Faculty of Spatial Sciences", "Groningen, The Netherlands", "Spatial information technology.",
-    "BSc. in Environmental and Infrastructure Planning", 2013, 2016, "University of Groningen, Faculty of Spatial Sciences", "Groningen, The Netherlands", "Urban planning, environmental planning and water planning.",
-    "BSc. in Environmental and Infrastructure Planning", 2013, 2016, "University of Groningen, Faculty of Spatial Sciences", "Groningen, The Netherlands", "Physical geography and economic geography.",
-    "BSc. in Environmental and Infrastructure Planning", 2013, 2016, "University of Groningen, Faculty of Spatial Sciences", "Groningen, The Netherlands", "Environmental engineering and transport engineering.",
-    "BSc. in Environmental and Infrastructure Planning", 2013, 2016, "University of Groningen, Faculty of Spatial Sciences", "Groningen, The Netherlands", "For my bachelor thesis, I investigated the change of the relative accessibility of peripheral regions in The Netherlands over time, using network analysis tools. It was supervised by Dr. Peter Groote. Grade: 9.5 out of 10."
+    "Bachelor of Science in Environmental and Infrastructure Planning", 2013, 2016, "University of Groningen, Faculty of Spatial Sciences", "Groningen, The Netherlands", "Spatial information technology.",
+    "Bachelor of Science in Environmental and Infrastructure Planning", 2013, 2016, "University of Groningen, Faculty of Spatial Sciences", "Groningen, The Netherlands", "Urban planning, environmental planning and water planning.",
+    "Bachelor of Science in Environmental and Infrastructure Planning", 2013, 2016, "University of Groningen, Faculty of Spatial Sciences", "Groningen, The Netherlands", "Physical geography and economic geography.",
+    "Bachelor of Science in Environmental and Infrastructure Planning", 2013, 2016, "University of Groningen, Faculty of Spatial Sciences", "Groningen, The Netherlands", "Environmental engineering and transport engineering.",
+    "Bachelor of Science in Environmental and Infrastructure Planning", 2013, 2016, "University of Groningen, Faculty of Spatial Sciences", "Groningen, The Netherlands", "For my bachelor thesis, I investigated the change of the relative accessibility of peripheral regions in The Netherlands over time, using network analysis tools. It was supervised by Dr. Peter Groote. Grade: 9.5 out of 10."
 )
-
 
 work <- tribble(
     ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
-    "Geospatial Developer", "Triply GmbH", "May", 2019, "Present", NA, "Linz, Austria", "Developing data-based solutions to analyze and improve sustainable transport accessibility in urban and rural regions.",
-    "Geospatial Developer", "Triply GmbH", "May", 2019, "Present", NA, "Linz, Austria", "Solving vehicle routing problems to optimize the efficiency of sustainable transportation alternatives to large events.",
-    "Research Assistant", "University of Salzburg, Department of Geoinformatics, EO Analytics Research Group", "May", 2019, "Present", NA, "Salzburg, Austria", "Employed in the research projects \\href{https://uni-salzburg.elsevierpure.com/en/projects/sentinel-2-semantic-data-cube-austria}{\\underline{Sen2Cube}} and \\href{https://uni-salzburg.elsevierpure.com/en/projects/a-cross-sensor-semantic-eo-data-cube-to-open-and-leverage-essenti}{\\underline{SemantiX}}.",
-    "Research Assistant", "University of Salzburg, Department of Geoinformatics, EO Analytics Research Group", "May", 2019, "Present", NA, "Salzburg, Austria", "Developing a Python library that implements a structured workflow for semantic querying of Earth observation data cubes.",
-    "Junior GIS Specialist", "University of Groningen Geoservice,Centre of Information Technology", "September", 2016, "August", 2017, "Groningen, The Netherlands", "Investigating the spatio-temporal patterns of supply shortage of shared bicycles in The Netherlands.",
-    "Junior GIS Specialist", "University of Groningen Geoservice,Centre of Information Technology", "September", 2016, "August", 2017, "Groningen, The Netherlands", "Results were published in \\href{https://www.ad.nl/binnenland/ov-fiets-is-niet-aan-te-slepen~va875d1d5/}{\\underline{Dutch newspapers}}.",
+    "Head of Research", "Triply GmbH", "May", 2019, "Present", NA, "Linz, Austria", "Creating and extending methods to analyze and improve sustainable transport accessibility in urban and rural regions.",
+    "Head of Research", "Triply GmbH", "May", 2019, "Present", NA, "Linz, Austria", "Developing data-based solutions for enterprises to support sustainable commuter mobility.",
+    "Head of Research", "Triply GmbH", "May", 2019, "Present", NA, "Linz, Austria", "Solving vehicle routing problems to optimize the efficiency of sustainable transportation alternatives to large events.",
+    "PhD Researcher", "University of Salzburg, Department of Geoinformatics, Mobility Lab", "July", 2022, "Present", NA, "Salzburg, Austria", "Using spatial data science to quantify metrics of human-centered, multi-dimensional transport accessibility.",
+    "Research Assistant", "University of Salzburg, Department of Geoinformatics, EO Analytics Lab", "May", 2019, "July", 2022, "Salzburg, Austria", "Developing a Python library that implements a structured workflow for semantic querying of Earth observation data cubes.",
+    "Junior GIS Specialist", "University of Groningen Geoservice, Centre of Information Technology", "September", 2016, "August", 2017, "Groningen, The Netherlands", "Investigating the spatio-temporal patterns of supply shortage of shared bicycles in The Netherlands.",
+    "Junior GIS Specialist", "University of Groningen Geoservice, Centre of Information Technology", "September", 2016, "August", 2017, "Groningen, The Netherlands", "Results were published in \\href{https://www.ad.nl/binnenland/ov-fiets-is-niet-aan-te-slepen~va875d1d5/}{\\underline{Dutch newspapers}}.",
     "Student Assistant", "University of Groningen, Faculty of Spatial Sciences", "September", 2015, "January", 2016, "Groningen, The Netherlands", "For the bachelor courses in Statistics and Spatial Information Technology."
 )
 

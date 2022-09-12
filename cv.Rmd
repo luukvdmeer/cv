@@ -103,30 +103,6 @@ edu %>%
 
 \newpage
 
-# Publications & Presentations
-
-```{r PUBLICATIONS}
-
-bibliography_entries(here("bib", "pubs.bib"))
-
-```
-
-# Software Development
-
-```{r WORKS}
-
-dev %>%
-  detailed_entries(
-    with = area,
-    what = accomplishment,
-    why = detail,
-    when = year,
-    where = where,
-    .protect = FALSE
-  )
-
-```
-
 # Honors
 
 ```{r HONORS}
@@ -139,6 +115,22 @@ honors %>%
     when = year,
     where = where
   )
+
+```
+
+# Selected publications
+
+```{r PUBLICATIONS}
+
+bibliography_entries(here("bib", "pubs.bib"))
+
+```
+
+# Selected software
+
+```{r WORKS}
+
+bibliography_entries(here("bib", "devs.bib"))
 
 ```
 
