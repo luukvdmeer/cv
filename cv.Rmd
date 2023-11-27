@@ -1,16 +1,15 @@
 ---
 name: Lucas
 surname: van der Meer
-position: "Geospatial Data Scientist"
+position: "Doctoral Researcher in Geoinformatics"
 address: "Salzburg, Austria"
 profilepic: "./img/me.jpg"
 email: "luukvandermeer@live.nl"
 github: luukvdmeer
 linkedin: luuk-van-der-meer
-twitter: LuukvanderMeer
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: 59C6B0
-aboutme: "I am a Master of Science in Geospatial Technologies who enjoys working at the interplay between theory and practice. My passion is to improve the quality of our living environments by supporting design choices with spatio-temporal data science."
+aboutme: "I am a doctoral researcher in geoinformatics at the University of Salzburg. I obtained a bachelor degree in Environmental & Infrastructure Planning from the University of Groningen, and a combined master degree in Geospatial Technologies from the universities of Lisbon, Castellon, and Münster. I am particularly interested in the application of geospatial data science to address socio-technical challenges regarding sustainable mobility, transport accessibility and livable cities."
 docname: CV
 output: vitae::awesomecv
 ---
@@ -37,34 +36,78 @@ source(file = here("R","data.R"))
 ```
 
 ```{r funcs}
-
-knit_print.vitae_table = function(x, options) {
-  x[is.na(x)] = ""
+knit_print.vitae_dict <- function(x, options) {
+  x[is.na(x)] <- ""
   if (isTRUE(attr(x, "protect"))) {
-    protect_tex_input = vitae:::protect_tex_input
+    protect_tex_input <- vitae:::protect_tex_input
   } else {
-    protect_tex_input = identity
+    protect_tex_input <- identity
   }
-  entry_format_func = function(key, value){
+  entry_format_func <- function(with, why){
+    why <- lapply(why, function(x) {
+      if(length(x) == 0) {
+        "{}\\vspace{-4.0mm}"
+      } else {
+        paste(c("{\\begin{cvitems}", paste("\\item", x), "\\end{cvitems}}"),
+              collapse = "\n")
+      }
+    })
     paste(c(
       "\\begin{cventries}",
-      vitae:::glue_alt("\t\\cvdict{<<key>>}{<<value>>}"),
+      vitae:::glue_alt("\t\\cvdict{<<with>>}<<why>>"),
       "\\end{cventries}"
     ), collapse = "\n")
   }
   knitr::asis_output(
     entry_format_func(
       protect_tex_input(x$with),
-      protect_tex_input(x$what)
+      protect_tex_input(x$why)
     )
   )
 }
 
-table_entries = function(data, ...) {
-  obj = detailed_entries(data, ...)
-  obj_class = class(obj)
-  obj_class[1] = "vitae_table"
-  class(obj) = obj_class
+dict_entries <- function(data, ...) {
+  obj <- detailed_entries(data, ...)
+  obj_class <- class(obj)
+  obj_class[1] <- "vitae_dict"
+  class(obj) <- obj_class
+  obj
+}
+
+knit_print.vitae_list <- function(x, options) {
+  x[is.na(x)] <- ""
+  if (isTRUE(attr(x, "protect"))) {
+    protect_tex_input <- vitae:::protect_tex_input
+  } else {
+    protect_tex_input <- identity
+  }
+  entry_format_func <- function(why){
+    why <- lapply(why, function(x) {
+      if(length(x) == 0) {
+        "{}\\vspace{-4.0mm}"
+      } else {
+        paste(c("{\\begin{cvenums}", paste("\\item", x), "\\end{cvenums}}"),
+              collapse = "\n")
+      }
+    })
+    paste(c(
+      "\\begin{cventries}",
+      vitae:::glue_alt("\t\\cvlist<<why>>"),
+      "\\end{cventries}"
+    ), collapse = "\n")
+  }
+  knitr::asis_output(
+    entry_format_func(
+      protect_tex_input(x$why)
+    )
+  )
+}
+
+list_entries <- function(data, ...) {
+  obj <- detailed_entries(data, ...)
+  obj_class <- class(obj)
+  obj_class[1] <- "vitae_list"
+  class(obj) <- obj_class
   obj
 }
 
@@ -78,9 +121,9 @@ work %>%
   detailed_entries(
     with = title,
     what = unit,
-    why = detail,
+    why = description,
     when = glue::glue("{startMonth} {startYear} \\textemdash {endMonth} {endYear}",.na = ""),
-    where = where,
+    where = location,
     .protect = FALSE
   )
 
@@ -92,94 +135,59 @@ work %>%
 
 edu %>%
   detailed_entries(
-    with = inst,
+    with = institute,
     what = degree,
-    why = detail,
+    why = description,
     when = glue::glue("{startYear} \\textemdash {endYear}", .na = ""),
-    where = where,
+    where = location,
     .protect = FALSE
 )
 ```
 
-\newpage
+# Skills
 
-# Honors
+```{r SKILLS}
 
-```{r HONORS}
-
-honors %>%
-  detailed_entries(
-    with = area,
-    what = accomplishment,
-    why = detail,
-    when = year,
-    where = where
-  )
-
+skills %>%
+  dict_entries(
+    with = category,
+    why = description,
+    .protect = FALSE
+)
 ```
 
 # Selected publications
 
 ```{r PUBLICATIONS}
 
-bibliography_entries(here("bib", "pubs.bib"))
+pub %>%
+  list_entries(
+    why = reference,
+    .protect = FALSE
+)
 
 ```
 
 # Selected software
 
-```{r WORKS}
+```{r SOFTWARE}
 
-bibliography_entries(here("bib", "devs.bib"))
-
-```
-
-# Technical Skills
-
-```{r TECHSKILLS}
-
-tech %>%
-  table_entries(
-    with = area,
-    what = skills
-  )
-
-```
-
-# Soft Skills
-
-```{r SOFTSKILLS}
-
-soft %>%
-  table_entries(
-    with = area,
-    what = skills,
+dev %>%
+  list_entries(
+    why = reference,
     .protect = FALSE
-  )
+)
 
 ```
 
-# Languages
+# Selected awards
 
-```{r LANGUAGES}
+```{r AWARDS}
 
-lang %>%
-  table_entries(
-    with = level,
-    what = lang
-  )
-
-```
-
-# References
-
-```{r REFERENCES}
-
-ref %>%
-  table_entries(
-    with = name,
-    what = contact,
+awards %>%
+  list_entries(
+    why = reference,
     .protect = FALSE
-  )
+)
 
 ```

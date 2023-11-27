@@ -1,45 +1,3 @@
-# projects <- tribble(
-#     ~area, ~accomplishment, ~year, ~where, ~detail,
-#     "Lean Six Sigma Green Belt --- Reception Center Intake Process", "California Correctional Health Care Services", 2019, "Region 1 Quality Management", "Completed a Lean Six Sigma Green Belt project on the reception center medical screening process at San Quentin State Prison improving compliance from 2% and a baseline capability aggregate of 29.96% compliance to 84% during the transition phase of the project through application of the lean 6 methodologies and tools. Scope of project affects 6 total state prisons with 3 more to be positively impacted by state wide changes resulting from this project",
-#     "Universal Data Scrubber", "California Correctional Health Care Services", 2018, "Region 1 Quality Management", "Creation of a Universal Data Scrubbing tool sent statewide to take most department SQL Report Server exports and turn them into raw data sets for Excel Analytics for end user staff"
-# )
-#
-# certifications <- tribble(
-#     ~area, ~accomplishment, ~year, ~where, ~detail,
-#     "Certified Lean Six Sigma Green Belt", NA, "", "", NA,
-#     "Certified Lean Six Sigma White Belt", NA, "", "", NA,
-#     "Microsoft Software", "Various Applications", "", "", "Microsoft Excel - 112",
-#     "Microsoft Software", "Various Applications", "", "", "Microsoft Word - 22",
-#     "Microsoft Software", "Various Applications", "", "", "Microsoft Outlook - 21",
-#     "Microsoft Software", "Various Applications", "", "", "Microsoft Power Point - 18",
-#     "Microsoft Software", "Various Applications", "", "", "Share Point - 9",
-#     "Microsoft Software", "Various Applications", "", "", "Microsoft Project - 6",
-#     "Microsoft Software", "Various Applications", "", "", "Microsoft Access - 3",
-#     "Microsoft Software", "Various Applications", "", "", "Microsoft Power BI - 3"
-# )
-
-tech <- tribble(
-    ~area, ~skills,
-    "Programming languages", "R, Python, PostgreSQL (with PostGIS extension), Bash",
-    "Desktop GIS", "QGIS, ArcGIS, GRASS GIS",
-    "Geospatial tools", "GDAL, GEOS, PROJ, Leaflet, OpenStreetMap API, OSRM, OpenTripPlanner, R5",
-    "Reproducible research", "Docker, Binder, Git, GitHub, Quarto, Jupyter, Markdown, Latex"
-)
-
-soft <- tribble(
-    ~area, ~skills,
-    "Organization", "I was part of the organizing comittee of the \\href{https://geomundus.org/2018/}{\\underline{Geomundus Conference}} in Lisbon, Portugal, 2018.",
-    "Management", "I was treasurer of the student cycle club in Groningen, The Netherlands, between 2013 and 2014.",
-    "Teamwork", "I have been a cyclist in several cycling teams up to elite level from 2012 until present."
-)
-
-lang <- tribble(
-    ~level, ~lang,
-    "Native", "Dutch",
-    "Advanced", "English, German",
-    "Basic", "Swedish, French, Spanish"
-)
-
 honors <- tribble(
     ~area, ~accomplishment, ~year, ~where, ~detail,
     "Best Student Award", "For the Master of Science in Geospatial Technologies", 2019, "Muenster, Germany", "Final grade: 19 out of 20.",
@@ -47,13 +5,14 @@ honors <- tribble(
 )
 
 edu <- tribble(
-    ~inst, ~startYear, ~endYear, ~degree, ~where, ~detail,
+    ~institute, ~startYear, ~endYear, ~degree, ~location, ~description,
     # MSc.
     "Master of Science in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Reproducible spatial data science in R, Python and SQL.",
     "Master of Science in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Geographic information science.",
     "Master of Science in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Geostatistics and spatial statistics.",
     "Master of Science in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Machine Learning and data mining of geospatial big data.",
     "Master of Science in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Remote sensing.",
+    "Master of Science in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Geospatial data visualization.",
     "Master of Science in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Project management and academic writing.",
     "Master of Science in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "For my master thesis, I created an automated spatio-temporal forecasting system for bike availability in dockless bike sharing systems, using time series forecasting methods. It was supervised by Prof. Dr. Edzer Pebesma. Grade: 20/20.",
     # Minor
@@ -65,25 +24,63 @@ edu <- tribble(
     "Bachelor of Science in Environmental and Infrastructure Planning", 2013, 2016, "University of Groningen, Faculty of Spatial Sciences", "Groningen, The Netherlands", "Urban planning, environmental planning and water planning.",
     "Bachelor of Science in Environmental and Infrastructure Planning", 2013, 2016, "University of Groningen, Faculty of Spatial Sciences", "Groningen, The Netherlands", "Physical geography and economic geography.",
     "Bachelor of Science in Environmental and Infrastructure Planning", 2013, 2016, "University of Groningen, Faculty of Spatial Sciences", "Groningen, The Netherlands", "Environmental engineering and transport engineering.",
+    "Bachelor of Science in Environmental and Infrastructure Planning", 2013, 2016, "University of Groningen, Faculty of Spatial Sciences", "Groningen, The Netherlands", "Applied statistics.",
     "Bachelor of Science in Environmental and Infrastructure Planning", 2013, 2016, "University of Groningen, Faculty of Spatial Sciences", "Groningen, The Netherlands", "For my bachelor thesis, I investigated the change of the relative accessibility of peripheral regions in The Netherlands over time, using network analysis tools. It was supervised by Dr. Peter Groote. Grade: 9.5 out of 10."
 )
 
 work <- tribble(
-    ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
-    "Head of Research", "Triply GmbH", "May", 2019, "Present", NA, "Linz, Austria", "Creating and extending methods to analyze and improve sustainable transport accessibility in urban and rural regions.",
-    "Head of Research", "Triply GmbH", "May", 2019, "Present", NA, "Linz, Austria", "Developing data-based solutions for enterprises to support sustainable commuter mobility.",
-    "Head of Research", "Triply GmbH", "May", 2019, "Present", NA, "Linz, Austria", "Solving vehicle routing problems to optimize the efficiency of sustainable transportation alternatives to large events.",
-    "Researcher", "University of Salzburg, Department of Geoinformatics, Mobility Lab", "July", 2022, "Present", NA, "Salzburg, Austria", "Using spatial data science to quantify metrics of human-centered, multi-dimensional transport accessibility.",
-    "Researcher", "University of Salzburg, Department of Geoinformatics, EO Analytics Lab", "May", 2019, "July", 2022, "Salzburg, Austria", "Developing a Python library that implements a structured workflow for semantic querying of Earth observation data cubes.",
+    ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~location, ~description,
+    "Doctoral Researcher", "University of Salzburg, Department of Geoinformatics, Mobility Lab", "November", 2023, "Present", NA, "Salzburg, Austria", "Investigating how the design of public space can provide us with pleasurable experiences during movement, how this affects our perceptions of accessibility, and how we can integrate these findings into quantitative frameworks for accessibility assessment within urban digital twins.",
+    "Geospatial Developer", "Triply GmbH", "May", 2019, "Present", NA, "Linz, Austria", "Creating and extending methods to analyze and improve sustainable transport accessibility in urban and rural regions.",
+    "Geospatial Developer", "Triply GmbH", "May", 2019, "Present", NA, "Linz, Austria", "Developing data-based solutions for enterprises to support sustainable corporate mobility.",
+    "Geospatial Developer", "Triply GmbH", "May", 2019, "Present", NA, "Linz, Austria", "Solving vehicle routing problems to optimize the efficiency of sustainable transportation alternatives to companies and events.",
+    "Research Assistant", "University of Salzburg, Department of Geoinformatics, Mobility Lab", "July", 2022, "October", 2023, "Salzburg, Austria", "Developing software and methods for the automatic assessment of the bikeability of street networks.",
+    "Research Assistant", "University of Salzburg, Department of Geoinformatics, Mobility Lab", "July", 2022, "October", 2023, "Salzburg, Austria", "Evaluating the challenges of V2X communication between automated vehicles and bikes in real-world settings.",
+    "Research Assistant", "University of Salzburg, Department of Geoinformatics, EO Analytics Lab", "May", 2019, "July", 2022, "Salzburg, Austria", "Developing software and methods for semantic querying of Earth observation data cubes.",
     "Junior GIS Specialist", "University of Groningen Geoservice, Centre of Information Technology", "September", 2016, "August", 2017, "Groningen, The Netherlands", "Investigating the spatio-temporal patterns of supply shortage of shared bicycles in The Netherlands.",
-    "Junior GIS Specialist", "University of Groningen Geoservice, Centre of Information Technology", "September", 2016, "August", 2017, "Groningen, The Netherlands", "Results were published in \\href{https://www.ad.nl/binnenland/ov-fiets-is-niet-aan-te-slepen~va875d1d5/}{\\underline{Dutch newspapers}}.",
+    "Junior GIS Specialist", "University of Groningen Geoservice, Centre of Information Technology", "September", 2016, "August", 2017, "Groningen, The Netherlands", "Providing assistance to researchers and students in computational spatial analysis tasks.",
     "Student Assistant", "University of Groningen, Faculty of Spatial Sciences", "September", 2015, "January", 2016, "Groningen, The Netherlands", "For the bachelor courses in Statistics and Spatial Information Technology."
 )
 
+skills <- tribble(
+    ~category, ~description,
+    "Software development", "Programming languages: R, Python, PostgreSQL (with PostGIS extension), Bash",
+    "Software development", "GIS software: QGIS, ArcGIS, GRASS GIS",
+    "Software development", "Geospatial tools: GDAL, GEOS, PROJ, Leaflet, OpenStreetMap API, OSRM, OpenTripPlanner, R5, OR Tools",
+    "Software development", "Reproducible research: Docker, Binder, Git, GitHub, Quarto, Jupyter, Markdown, Latex",
+    "Management, Organization and Teamwork", "I have been part of interdisciplinary research teams in different countries, both in academia and industry.",
+    "Management, Organization and Teamwork", "I have organized events in science and in sports, including the GeoMundus Conference 2018 and the Dutch Student Sport Championships 2017.",
+    "Management, Organization and Teamwork", "I have served as board member of several local cycling clubs in The Netherlands.",
+    "Management, Organization and Teamwork", "I have been part of several cycling teams up to elite level.",
+    "Presenting and Writing", "I have published multiple scientific papers in Scopus-indexed journals, including Sustainability, and Remote Sensing.",
+    "Presenting and Writing", "I have presented my work at several international scientific conferences, including GIScience, AGILE, and FOSS4G.",
+    "Presenting and Writing", "I have been a columnist for local newspapers and the international cycling news website Wielerflits.nl.",
+    "Languages", "Native proficiency: Dutch",
+    "Languages", "Full professional proficiency: English",
+    "Languages", "Professional working proficiency: German",
+    "Languages", "Elementary proficiency: French, Spanish, Swedish"
+)
+
+awards <- tribble(
+    ~reference,
+    "\\textbf{Best Camper Award} at the Cycling Research Board Annual Meeting 2023 for the talk \\textit{Happiness is in the journey: A different view on measuring accessibility in the cycling city}.",
+    "\\textbf{Best Poster Award} at the GIScience Conference 2023 for the poster \\textit{Towards human-centric metrics for urban bikeability}.",
+    "\\textbf{Outstanding Regular Talk Award} at the UseR! Conference 2021 for the talk \\textit{Tidy Geospatial Networks in R}.",
+    "\\textbf{Best Student Award} for the Master of Science in Geospatial Technologies, 2017-2019."
+)
+
+pub <- tribble(
+    ~reference,
+    "\\textbf{Van der Meer, L}, Sudmanns, M, Augustin, H, Baraldi, A \\& Tiede, D 2022, 'Semantic querying in Earth observation data cubes', \\textit{International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences - ISPRS Archives}, vol. 48, no. 4/W1-2022, pp. 503-510. \\href{https://doi.org/10.5194/isprs-archives-XLVIII-4-W1-2022-503-2022}{\\underline{doi.org/10.5194/isprs-archives-XLVIII-4-W1-2022-503-2022}}",
+    "Sudmanns, M, Augustin, H, \\textbf{Van der Meer, L}, Baraldi, A \\& Tiede, D 2021, 'The Austrian Semantic EO Data Cube Infrastructure', \\textit{Remote Sensing}, vol. 13, no. 23, 4807. \\href{https://doi.org/10.3390/rs13234807}{\\underline{doi.org/10.3390/rs13234807}}",
+    "Abad L \\& \\textbf{Van der Meer L} 2018, 'Quantifying Bicycle Network Connectivity in Lisbon Using Open Data', \\textit{Information}, vol. 9, no. 11, 287. \\href{https://doi.org/10.3390/info9110287}{\\underline{doi.org/10.3390/info9110287}}"
+)
+
 dev <- tribble(
-    ~area, ~accomplishment, ~year, ~where, ~detail,
-    "sfnetworks", "Tidy Geospatial Networks in R", 2021, "R Package", "Author and Maintainer",
-    "sfnetworks", "Tidy Geospatial Networks in R", 2021, "R Package", "Available on the \\href{https://cran.r-project.org/web/packages/sfnetworks/index.html}{\\underline{Comprehensive R Archive Network (CRAN)}} and funded by the \\href{https://www.r-consortium.org/projects/awarded-projects/2019-group-2}{\\underline{R-Consortium}}."
+    ~reference,
+    "\\textbf{sfnetworks:} Tidy geospatial networks in R. \\href{https://github.com/luukvdmeer/sfnetworks}{\\underline{github.com/luukvdmeer/sfnetworks}}",
+    "\\textbf{netapy:} Assessing street network suitability for sustainable transport modes. \\href{https://github.com/plus-mobilitylab/netapy}{\\underline{github.com/plus-mobilitylab/netapy}}",
+    "\\textbf{semantique:} Semantic querying in Earth observation data cubes. \\href{https://github.com/ZGIS/semantique}{\\underline{github.com/ZGIS/semantique}}"
 )
 
 ref <- tribble(

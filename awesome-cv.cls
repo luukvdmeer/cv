@@ -206,8 +206,9 @@
 \newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{graytext} #1}}
 \newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
 \newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\newcommand*{\listitemstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of subentry
 \newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{graytext} #1}}
@@ -619,14 +620,25 @@
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}%
   \end{tabular*}%
 }
-% Define a entry of cv information in key-value style
-% Usage: \cventry{<key>}{<value>}
+% Define a entry of cv information in key-values style
+% Usage: \cvdict{<key>}{<values>}
 \newcommand*{\cvdict}[2]{
 %  \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}%
   \setlength{\extrarowheight}{0pt}%
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}%
-    \multicolumn{2}{L{\textwidth}}{\entrytitlestyle{#1}\enspace\entrypositionstyle{#2}}%
+    \entrytitlestyle{#1} \\%
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#2}}%
+  \end{tabular*}%
+}
+% Define a entry of cv information in numbered list style
+% Usage: \cvlist{<items>}
+\newcommand*{\cvlist}[1]{
+%  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}%
+  \setlength{\extrarowheight}{0pt}%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}%
+    \multicolumn{2}{L{\textwidth}}{\listitemstyle{#1}}%
   \end{tabular*}%
 }
 
@@ -704,6 +716,17 @@
   \vspace{-4.0mm}
 }
 
+\newenvironment{cvenums}{%
+  \vspace{-4.0mm}
+  \begin{justify}
+  \begin{enumerate}[leftmargin=2ex, nosep, noitemsep]
+    \setlength{\parskip}{2pt}
+    \renewcommand{\labelitemi}{\bullet}
+}{%
+  \end{enumerate}
+  \end{justify}
+  \vspace{-4.0mm}
+}
 
 %-------------------------------------------------------------------------------
 %                Commands for elements of Cover Letter
