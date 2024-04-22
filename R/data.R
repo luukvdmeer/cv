@@ -6,6 +6,10 @@ honors <- tribble(
 
 edu <- tribble(
     ~institute, ~startYear, ~endYear, ~degree, ~location, ~description,
+    # PhD.
+    "Doctoral School of Geoinformatics", 2023, NA, "University of Salzburg, Department of Geoinformatics", "Salzburg, Austria", "Modelling complex geographical systems",
+    "Doctoral School of Geoinformatics", 2023, NA, "University of Salzburg, Department of Geoinformatics", "Salzburg, Austria", "Spatial simulation",
+    "Doctoral School of Geoinformatics", 2023, NA, "University of Salzburg, Department of Geoinformatics", "Salzburg, Austria", "Philosophy of science",
     # MSc.
     "Master of Science in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Reproducible spatial data science in R, Python and SQL.",
     "Master of Science in Geospatial Technologies", 2017, 2019, "New University of Lisbon, Information Management School \\newline University of Muenster, Institute for Geoinformatics", "Lisbon, Portugal \\& Muenster, Germany", "Geographic information science.",
