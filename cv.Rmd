@@ -193,3 +193,15 @@ awards %>%
 )
 
 ```
+
+# References
+
+```{r REFS}
+
+ref %>%
+  list_entries(
+    why = reference,
+    .protect = FALSE
+)
+
+```
