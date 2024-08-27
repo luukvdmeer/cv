@@ -3,7 +3,7 @@ name: Lucas
 surname: van der Meer
 position: "Doctoral Researcher in Geoinformatics"
 address: "Salzburg, Austria"
-profilepic: "./img/me.jpg"
+profilepic: "./img/me.png"
 email: "luukvandermeer@live.nl"
 github: luukvdmeer
 linkedin: luuk-van-der-meer
