@@ -1,9 +1,3 @@
-honors <- tribble(
-    ~area, ~accomplishment, ~year, ~where, ~detail,
-    "Best Student Award", "For the Master of Science in Geospatial Technologies", 2019, "Muenster, Germany", "Final grade: 19 out of 20.",
-    "Outstanding Regular Talk Award", "At the UseR! Conference", 2021, "Remote", "Tidy geospatial networks in R."
-)
-
 edu <- tribble(
     ~institute, ~startYear, ~endYear, ~degree, ~location, ~description,
     # PhD.
@@ -93,4 +87,9 @@ ref <- tribble(
     ~reference,
     "\\textbf{Dr. Martin Loidl:} University of Salzburg, Department of Geoinformatics. \\href{https://www.plus.ac.at/geoinformatik/department/team/loidl/?lang=en}{\\underline{Contact}}: martin.loidl@plus.ac.at",
     "\\textbf{Prof. Dr. Dirk Tiede:} University of Salzburg, Department of Geoinformatics. \\href{https://www.plus.ac.at/geoinformatik/department/team/tiede/?lang=en}{\\underline{Contact}}: dirk.tiede@plus.ac.at"
+)
+
+pure <- tribble(
+    ~reference,
+    "For a complete overview of my research outputs, see my \\href{https://uni-salzburg.elsevierpure.com/en/persons/luuk-van-der-meer}{\\underline{Pure profile}}"
 )
