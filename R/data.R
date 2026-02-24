@@ -61,6 +61,7 @@ skills <- tribble(
 
 awards <- tribble(
     ~reference,
+    "\\textbf{Best Poster Award} at the Cycling Research Board Annual Meeting 2024 for the poster \\textit{Digital twins of human-centric cities}.",
     "\\textbf{Best Presentation Award} at the Cycling Research Board Annual Meeting 2023 for the talk \\textit{Happiness is in the journey: A different view on measuring accessibility in the cycling city}.",
     "\\textbf{Best Poster Award} at the GIScience Conference 2023 for the poster \\textit{Towards human-centric metrics for urban bikeability}.",
     "\\textbf{Outstanding Regular Talk Award} at the UseR! Conference 2021 for the talk \\textit{Tidy Geospatial Networks in R}.",
@@ -86,7 +87,7 @@ dev <- tribble(
 ref <- tribble(
     ~reference,
     "\\textbf{Dr. Martin Loidl:} University of Salzburg, Department of Geoinformatics. \\href{https://www.plus.ac.at/geoinformatik/department/team/loidl/?lang=en}{\\underline{Contact}}: martin.loidl@plus.ac.at",
-    "\\textbf{Prof. Dr. Dirk Tiede:} University of Salzburg, Department of Geoinformatics. \\href{https://www.plus.ac.at/geoinformatik/department/team/tiede/?lang=en}{\\underline{Contact}}: dirk.tiede@plus.ac.at"
+    "\\textbf{Prof. Dr. Johannes Scholz:} University of Salzburg, Department of Geoinformatics. \\href{https://www.plus.ac.at/geoinformatik/department/team/scholz/?lang=en}{\\underline{Contact}}: johannes.scholz@plus.ac.at"
 )
 
 pure <- tribble(
